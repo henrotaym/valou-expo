@@ -14,6 +14,7 @@ const Footer = () => {
   const submit = async (e: FormEvent) => {
     e.preventDefault();
     if (isLoading) return;
+    setIsLoading(true);
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_APP_URL}/api/comments`,
       {
