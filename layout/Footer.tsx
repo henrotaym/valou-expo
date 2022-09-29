@@ -82,10 +82,10 @@ const Footer = () => {
               type="submit"
               className="font-medium bg-gradient-to-br from-[#4f343e] to-[#64424e] text-white py-3 px-6 rounded-md focus:outline-none focus:shadow-outline transition"
             >
-              {!isLoading ? (
+              {isLoading ? (
                 <span className="flex items-center gap-3">
                   <svg
-                    className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                    className="animate-spin h-5 w-5 text-white"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
