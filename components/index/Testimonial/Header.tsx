@@ -6,7 +6,7 @@ type Props = { testimonial: Testimonial };
 const Header = ({ testimonial }: Props) => {
   return (
     <header>
-      <figure className="h-screen bg-red-500 relative">
+      <figure className="h-screen relative">
         <Image src={testimonial.picture} layout="fill" objectFit="cover" />
         <figcaption className="absolute inset-0 flex items-center justify-center p-4">
           <span className="text-center grid grid-col gap-2 text-white">
