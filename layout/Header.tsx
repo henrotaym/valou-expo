@@ -12,7 +12,9 @@ const TestimonialLink = ({ testimonial, close }: TestimonialLinkProps) => {
   const router = useRouter();
   const { query } = router;
   const isActive = useMemo(
-    () => query.slug === testimonial.slug,
+    () =>
+      query.slug === testimonial.slug ||
+      (!query.slug && testimonial.slug === "intro"),
     [query.slug, testimonial.slug]
   );
   return (
