@@ -1,0 +1,12 @@
+docker
+docker-compose.yml
+Dockerfile
+.dockerignore
+node_modules
+.next
+.git
+.vscode
+.husky
+.eslintrc.json
+.lintstagedrc.js
+README.md
