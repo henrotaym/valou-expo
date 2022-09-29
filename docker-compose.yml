@@ -1,8 +1,8 @@
 version: '3.4'
-name: centralized_auth
+name: expo_valou
 services:
   app:
-    container_name: centralized_auth_app
+    container_name: expo_valou_app
     build:
       context: .
       dockerfile: Dockerfile
@@ -10,16 +10,16 @@ services:
       - ${APP_PORT:-3000}:3000
     volumes:
       - ./:/app
-      # - /centralized_auth/db/data:/data/db
+      - /expo_valou/db/data:/data/db
     depends_on:
       - database
   database:
-    container_name: centralized_auth_database
+    container_name: expo_valou_database
     image: henrotaym/mongo-replica-set:4.0.1
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${DB_USERNAME:-root}
       MONGO_INITDB_ROOT_PASSWORD: ${DB_PASSWORD:-root}
-      MONGO_INITDB_DATABASE: ${DB_DATABASE:-centralized_auth}
+      MONGO_INITDB_DATABASE: ${DB_DATABASE:-expo_valou}
       MONGO_REPLICA_HOST: host.docker.internal
       MONGO_REPLICA_PORT: ${DB_PORT:-27018}
     ports:

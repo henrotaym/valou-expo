@@ -9,7 +9,7 @@ const Body = ({ testimonial }: Props) => {
         dangerouslySetInnerHTML={{ __html: testimonial.body }}
         className="grid gap-4"
       />
-      <span className="text-right">Valérie</span>
+      <span className="text-right">{testimonial.model}</span>
     </main>
   );
 };
