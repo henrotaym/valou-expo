@@ -37,14 +37,14 @@ const Footer = () => {
     setMessage(target.value);
   };
   return (
-    <footer className="p-6 bg-gradient-to-br from-[#4f343e] to-[#64424e] rounded-t-xl shadow">
-      <h2 className="text-slate-50 text-lg font-medium mb-4">
+    <footer className="px-6 pt-12 pb-16 bg-gradient-to-br from-[#4f343e] to-[#64424e] rounded-t-xl shadow">
+      <h2 className="text-slate-50 text-lg font-medium mb-6">
         Laissez une trace de votre passage
       </h2>
       <div className="bg-slate-50 rounded-lg">
-        <form action="" className="p-4" onSubmit={submit}>
+        <form action="" className="px-6 pt-8 pb-8 shadow" onSubmit={submit}>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm" htmlFor="username">
+            <label className="block text-gray-700" htmlFor="username">
               <span className="inline-block mb-2 font-bold">Adresse email</span>
               <input
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-[#614450] focus:ring-2"
@@ -59,7 +59,7 @@ const Footer = () => {
             </label>
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm" htmlFor="comment">
+            <label className="block text-gray-700" htmlFor="comment">
               <span className="inline-block mb-2 font-bold">Message</span>
               <textarea
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-[#614450] focus:ring-2"
@@ -76,7 +76,7 @@ const Footer = () => {
           <div className="flex justify-end">
             <button
               type="submit"
-              className="bg-gradient-to-br from-[#4f343e] to-[#64424e] text-white py-2 px-4 rounded-md focus:outline-none focus:shadow-outline transition"
+              className="font-medium bg-gradient-to-br from-[#4f343e] to-[#64424e] text-white py-2 px-4 rounded-md focus:outline-none focus:shadow-outline transition"
             >
               Envoyer
             </button>
