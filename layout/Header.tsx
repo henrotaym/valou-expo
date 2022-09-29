@@ -1,4 +1,5 @@
 import { Testimonial } from "@prisma/client";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useMemo, useState } from "react";
@@ -55,15 +56,23 @@ type ClosedHeaderProps = {
 
 const ClosedHeader = ({ open }: ClosedHeaderProps) => {
   return (
-    <button
-      type="button"
-      className="absolute z-10 left-8 top-8 grid gap-2"
-      onClick={open}
-    >
-      <div className="w-8 h-[1px] bg-white" />
-      <div className="w-8 h-[1px] bg-white" />
-      <div className="w-8 h-[1px] bg-white" />
-    </button>
+    <>
+      <a
+        className="block absolute z-10 right-8 top-[26px] h-8 w-8"
+        href="https://www.instagram.com/valerie.henrotay"
+      >
+        <Image src="/instagram.svg" layout="fill" objectFit="cover" />
+      </a>
+      <button
+        type="button"
+        className="absolute z-10 left-8 top-8 grid gap-2"
+        onClick={open}
+      >
+        <div className="w-8 h-[1px] bg-white" />
+        <div className="w-8 h-[1px] bg-white" />
+        <div className="w-8 h-[1px] bg-white" />
+      </button>
+    </>
   );
 };
 
