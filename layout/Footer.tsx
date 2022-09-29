@@ -50,7 +50,7 @@ const Footer = () => {
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-[#614450] focus:ring-2"
                 id="username"
                 name="username"
-                type="text"
+                type="email"
                 required
                 placeholder="Votre adresse email"
                 onInput={onEmailInput}

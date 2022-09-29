@@ -20,7 +20,7 @@ const TestimonialC = ({ testimonials, slug }: Props) => {
     return (
       <>
         <Head>
-          <title>Peines de coeur - non trouvé</title>
+          <title>Peine de coeur - non trouvé</title>
         </Head>
         <div className="h-screen w-full flex justify-center items-center">
           <div className="bg-gradient-to-br from-[#4f343e] to-[#64424e] absolute inset-x-0 top-0 h-20 rounded-b-lg" />
@@ -31,7 +31,7 @@ const TestimonialC = ({ testimonials, slug }: Props) => {
   return (
     <>
       <Head>
-        <title>Peines de coeur - {testimonial.title}</title>
+        <title>Peine de coeur - {testimonial.title}</title>
       </Head>
       <Header testimonial={testimonial} />
       <Body testimonial={testimonial} />
