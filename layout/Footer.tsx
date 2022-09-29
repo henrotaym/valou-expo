@@ -4,6 +4,7 @@ const Footer = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const reset = () => {
     setEmail("");
     setMessage("");
@@ -12,6 +13,7 @@ const Footer = () => {
   };
   const submit = async (e: FormEvent) => {
     e.preventDefault();
+    if (isLoading) return;
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_APP_URL}/api/comments`,
       {
@@ -25,6 +27,7 @@ const Footer = () => {
         }),
       }
     );
+    setIsLoading(false);
     if (!response.ok) return;
     reset();
   };
@@ -76,9 +79,16 @@ const Footer = () => {
           <div className="flex justify-end">
             <button
               type="submit"
-              className="font-medium bg-gradient-to-br from-[#4f343e] to-[#64424e] text-white py-2 px-4 rounded-md focus:outline-none focus:shadow-outline transition"
+              className="font-medium bg-gradient-to-br from-[#4f343e] to-[#64424e] text-white py-3 px-6 rounded-md focus:outline-none focus:shadow-outline transition"
             >
-              Envoyer
+              {isLoading ? (
+                <span className="flex items-center gap-3">
+                  <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24" />
+                  <span>Envoi en cours...</span>
+                </span>
+              ) : (
+                "Envoyer"
+              )}
             </button>
           </div>
         </form>
