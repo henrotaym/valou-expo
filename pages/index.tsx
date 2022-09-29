@@ -6,19 +6,7 @@ import IndexComponents from "@/components/index";
 export const getServerSideProps: GetServerSideProps = async () => {
   const prisma = new PrismaClient();
   const testimonials = await prisma.testimonial.findMany();
-  console.log({ testimonials });
-  if (!testimonials.length) {
-    const testimonial = await prisma.testimonial.create({
-      data: {
-        title: "test",
-        picture: "/testimonials/broken-mirror.jpg",
-        body: "corps",
-        slug: "test",
-        subtitle: "Texte de Aude",
-      },
-    });
-    console.log({ testimonial });
-  }
+
   return { props: { testimonials } };
 };
 
